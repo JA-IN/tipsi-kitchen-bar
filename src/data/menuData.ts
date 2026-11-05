@@ -1,4 +1,7 @@
 import { MenuCategory, RestaurantInfo, BanquetHall, GalleryPhoto } from '../types';
+import banquetImage from '../assets/images/tipsy_reception_banquet_1793447009148.jpg';
+import birthdayImage from '../assets/images/tipsy_birthday_celebration_1793446986182.jpg';
+import familyGatheringImage from '../assets/images/tipsy_family_gathering_1793447009908.jpg';
 
 export const RESTAURANT_INFO: RestaurantInfo = {
   name: "Tipsy Kitchen & Bar",
@@ -35,7 +38,7 @@ export const BANQUET_HALLS: BanquetHall[] = [
     name: "Grand Sovereign Banquet Hall",
     tagline: "Opulent banquet venue for regal family milestones & corporate galas",
     capacity: "80 – 250+ Guests",
-    image: "/src/assets/images/tipsy_reception_banquet_1793447009148.jpg",
+    image: banquetImage,
     features: [
       "Regal stage setup with floral backdrop options",
       "Lavish live buffet stations & wood-fired tandoor counters",
@@ -51,21 +54,21 @@ export const CELEBRATION_GALLERY: GalleryPhoto[] = [
     id: "gal-01",
     title: "Birthday & Anniversary Milestones",
     category: "Birthdays",
-    image: "/src/assets/images/tipsy_birthday_celebration_1793446986182.jpg",
+    image: birthdayImage,
     caption: "Joyous laughter, artisanal sparkling toasts, and custom cakes in our ambient private lounge."
   },
   {
     id: "gal-02",
     title: "Grand Wedding Reception & Ceremonies",
     category: "Receptions",
-    image: "/src/assets/images/tipsy_reception_banquet_1793447009148.jpg",
+    image: banquetImage,
     caption: "Chandelier-lit luxury banquets crafted with opulent table settings and royal hospitality."
   },
   {
     id: "gal-03",
     title: "Family Feasts & Corporate Dinners",
     category: "Family & Corporate",
-    image: "/src/assets/images/tipsy_family_gathering_1793447009908.jpg",
+    image: familyGatheringImage,
     caption: "Multi-generational family gatherings celebrating over sizzling platters and rich curries."
   },
   {
