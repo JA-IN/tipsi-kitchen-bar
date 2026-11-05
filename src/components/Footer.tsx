@@ -1,12 +1,8 @@
 import React from 'react';
-import { Phone, MessageSquare, Instagram, Navigation, MapPin, Clock, Calendar, Sparkles } from 'lucide-react';
+import { Phone, MessageSquare, Instagram, Navigation, MapPin, Clock } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
 
-interface FooterProps {
-  onOpenBanquetModal?: () => void;
-}
-
-export const Footer: React.FC<FooterProps> = ({ onOpenBanquetModal }) => {
+export const Footer: React.FC = () => {
   return (
     <footer id="lounge-story" className="w-full bg-[#0d0d0d] text-[#a99c8f] border-t border-white/5 pt-14 pb-24 sm:pb-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col gap-10">
@@ -31,22 +27,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBanquetModal }) => {
               </div>
             </div>
             <p className="text-xs sm:text-sm text-[#8a7e72] leading-relaxed max-w-sm">
-              Punjab&apos;s ambient culinary sanctuary. Progressive North Indian gastronomy, wood-fired tandoor creations, Japanese robata grills, party halls, and artisanal craft mocktails served in warm brass luxury.
+              Punjab&apos;s ambient culinary sanctuary. Progressive North Indian gastronomy, wood-fired tandoor creations, Japanese robata grills, and artisanal craft mocktails served in warm brass luxury.
             </p>
             <div className="pt-2 flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1c1b1b] text-xs text-[#f3be65] border border-[#f3be65]/20">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#f3be65] animate-pulse" />
-                Dine-in, Party Halls &amp; Banquets
+                Dine-in &amp; Signature Dining
               </span>
-              {onOpenBanquetModal && (
-                <button
-                  onClick={onOpenBanquetModal}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#d4a24c]/15 hover:bg-[#d4a24c]/25 text-xs text-[#f3be65] border border-[#f3be65]/40 transition-colors"
-                >
-                  <Calendar className="w-3 h-3" />
-                  <span>Reserve Banquet Hall</span>
-                </button>
-              )}
             </div>
           </div>
 
@@ -73,7 +60,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBanquetModal }) => {
                   +91 {RESTAURANT_INFO.phoneDisplay} (Front Desk)
                 </a>
                 <a href={`tel:${RESTAURANT_INFO.secondaryPhone}`} className="hover:text-white transition-colors">
-                  +91 {RESTAURANT_INFO.secondaryPhoneDisplay} (Banquet &amp; Events)
+                  +91 {RESTAURANT_INFO.secondaryPhoneDisplay} (Reservations)
                 </a>
               </div>
             </div>
@@ -141,7 +128,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBanquetModal }) => {
         {/* Copyright */}
         <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#786e63]">
           <p>© {new Date().getFullYear()} Tipsy Kitchen &amp; Bar. Central Hub, Khanna, Punjab. All rights reserved.</p>
-          <p className="text-[11px] text-[#9c8f7e]">Crafted for Table Hospitality, Mixology &amp; Banquets</p>
+          <p className="text-[11px] text-[#9c8f7e]">Crafted for Table Hospitality, Mixology &amp; Dining</p>
         </div>
       </div>
     </footer>

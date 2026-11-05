@@ -1,18 +1,16 @@
 import React from 'react';
-import { Phone, Instagram, ShoppingBag, Search, Calendar, Sparkles } from 'lucide-react';
+import { Phone, Instagram, ShoppingBag, Search } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { RESTAURANT_INFO } from '../data/menuData';
 
 interface HeaderProps {
   onSearchClick: () => void;
   isSearchActive: boolean;
-  onOpenBanquetModal: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   onSearchClick,
-  isSearchActive,
-  onOpenBanquetModal
+  isSearchActive
 }) => {
   const { totalItemsCount, setIsCartOpen, tableNumber } = useCart();
 
@@ -43,15 +41,6 @@ export const Header: React.FC<HeaderProps> = ({
           <a href="#cat-soups" className="hover:text-[#f3be65] transition-colors whitespace-nowrap">
             Menu
           </a>
-          <a href="#banquets" className="hover:text-[#f3be65] transition-colors whitespace-nowrap flex items-center gap-1.5">
-            <span>Party Halls &amp; Banquets</span>
-            <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-[#d4a24c]/20 text-[#f3be65] border border-[#f3be65]/30">
-              New
-            </span>
-          </a>
-          <a href="#gallery" className="hover:text-[#f3be65] transition-colors whitespace-nowrap">
-            Celebration Gallery
-          </a>
           <a href="#cat-mocktails" className="hover:text-[#f3be65] transition-colors whitespace-nowrap">
             Bar &amp; Mocktails
           </a>
@@ -62,15 +51,6 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Action Zone */}
         <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
-          {/* Banquet Booking Button on Header */}
-          <button
-            onClick={onOpenBanquetModal}
-            className="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#201f1f] hover:bg-[#282725] border border-[#f3be65]/30 text-xs font-semibold text-[#f3be65] transition-all"
-          >
-            <Calendar className="w-3.5 h-3.5" />
-            <span>Book Hall</span>
-          </button>
-
           {/* Search Trigger */}
           <button
             onClick={onSearchClick}

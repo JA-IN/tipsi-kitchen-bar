@@ -1,19 +1,15 @@
 import React from 'react';
-import { Phone, MessageSquare, Instagram, Navigation, Clock, Flame, UtensilsCrossed, Calendar, Sparkles, MapPin } from 'lucide-react';
+import { Phone, MessageSquare, Instagram, Navigation, Clock, Flame, UtensilsCrossed, MapPin } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
 import { useCart } from '../context/CartContext';
 
-interface HeroProps {
-  onOpenBanquetModal: () => void;
-}
-
-export const Hero: React.FC<HeroProps> = ({ onOpenBanquetModal }) => {
+export const Hero: React.FC = () => {
   const { tableNumber, setTableNumber } = useCart();
 
   const tableOptions = [
     'Table 01', 'Table 02', 'Table 03', 'Table 04', 'Table 05',
     'Table 06', 'Table 07', 'Table 08', 'Table 09', 'Table 10',
-    'Lounge Booth 01', 'Lounge Booth 02', 'Bar Counter', 'Party / Banquet Station'
+    'Lounge Booth 01', 'Lounge Booth 02', 'Bar Counter', 'Chef Counter'
   ];
 
   return (
@@ -34,7 +30,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBanquetModal }) => {
         {/* Ambient Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1e1c18]/90 border border-[#f3be65]/30 text-[#f3be65] mb-4 text-xs font-semibold tracking-widest uppercase shadow-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-[#f3be65] animate-pulse" />
-          <span>Gastronomic Speakeasy, Banquets &amp; Kitchen</span>
+          <span>Gastronomic Speakeasy &amp; Kitchen</span>
         </div>
 
         {/* Golden Bull Insignia Crest */}
@@ -88,22 +84,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBanquetModal }) => {
           >
             <UtensilsCrossed className="w-4 h-4" />
             <span>Browse Digital Menu</span>
-          </a>
-
-          <button
-            onClick={onOpenBanquetModal}
-            className="px-6 py-3 rounded-xl bg-[#252424] hover:bg-[#2e2d2d] border border-[#f3be65]/40 text-[#f3be65] font-bold text-xs tracking-wider uppercase transition-all shadow-md active:scale-95 flex items-center gap-2"
-          >
-            <Calendar className="w-4 h-4" />
-            <span>Book Party &amp; Banquet Hall</span>
-          </button>
-
-          <a
-            href="#gallery"
-            className="px-5 py-3 rounded-xl bg-[#1c1b1b] border border-white/10 hover:border-white/20 text-[#e5e2e1] font-semibold text-xs tracking-wider uppercase transition-all flex items-center gap-2"
-          >
-            <Sparkles className="w-4 h-4 text-[#ff9c73]" />
-            <span>View Gallery</span>
           </a>
         </div>
 

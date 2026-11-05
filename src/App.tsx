@@ -11,30 +11,21 @@ import { CategoryNav } from './components/CategoryNav';
 import { MenuItemCard } from './components/MenuItemCard';
 import { CartDrawer } from './components/CartDrawer';
 import { FloatingCartBar } from './components/FloatingCartBar';
-import { BanquetSection } from './components/BanquetSection';
-import { CelebrationGallery } from './components/CelebrationGallery';
-import { BanquetModal } from './components/BanquetModal';
 import { Footer } from './components/Footer';
 import { MENU_CATEGORIES } from './data/menuData';
 import { MenuItem, MenuCategory } from './types';
-import { SearchX, Sparkles, UtensilsCrossed } from 'lucide-react';
+import { SearchX, UtensilsCrossed } from 'lucide-react';
+import { CelebrationGallery } from './components/CelebrationGallery';
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [dietaryFilter, setDietaryFilter] = useState<'all' | 'veg' | 'nonveg' | 'special'>('all');
   const [activeCategoryId, setActiveCategoryId] = useState<string>(MENU_CATEGORIES[0]?.id || 'soups');
-  const [isBanquetModalOpen, setIsBanquetModalOpen] = useState(false);
-  const [preselectedHall, setPreselectedHall] = useState<string | undefined>(undefined);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   const handleSearchClick = () => {
     searchInputRef.current?.focus();
     searchInputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  };
-
-  const handleOpenBanquetModal = (hallName?: string) => {
-    setPreselectedHall(hallName);
-    setIsBanquetModalOpen(true);
   };
 
   // Filter items based on query and dietary toggle
@@ -97,17 +88,13 @@ export default function App() {
         <Header
           onSearchClick={handleSearchClick}
           isSearchActive={Boolean(searchQuery)}
-          onOpenBanquetModal={() => handleOpenBanquetModal()}
         />
 
         {/* Hero Section */}
-        <Hero onOpenBanquetModal={() => handleOpenBanquetModal()} />
+        <Hero />
 
-        {/* Dedicated Party Halls & Banquet Venues Section */}
-        <BanquetSection onOpenBookingModal={handleOpenBanquetModal} />
-
-        {/* Celebration & Festive Gathering Photo Gallery */}
-        <CelebrationGallery onBookClick={() => handleOpenBanquetModal()} />
+        {/* Celebration Gallery */}
+        <CelebrationGallery onBookClick={() => {}} />
 
         {/* Section Divider & Menu Anchor */}
         <div id="menu-section" className="w-full bg-[#141414] py-4 border-t border-b border-white/5">
@@ -199,15 +186,8 @@ export default function App() {
         {/* Slide-over Cart & WhatsApp Checkout Drawer */}
         <CartDrawer />
 
-        {/* Interactive Party Hall & Banquet Booking Modal */}
-        <BanquetModal
-          isOpen={isBanquetModalOpen}
-          onClose={() => setIsBanquetModalOpen(false)}
-          preselectedHallId={preselectedHall}
-        />
-
         {/* Footer */}
-        <Footer onOpenBanquetModal={() => handleOpenBanquetModal()} />
+        <Footer />
       </div>
     </CartProvider>
   );

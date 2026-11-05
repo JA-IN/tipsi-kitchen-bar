@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, Maximize2, X, ChevronRight, PartyPopper, HeartHandshake, Briefcase, Camera } from 'lucide-react';
+import { Maximize2, X, Camera } from 'lucide-react';
 import { CELEBRATION_GALLERY } from '../data/menuData';
 import { GalleryPhoto } from '../types';
 
@@ -40,14 +40,6 @@ export const CelebrationGallery: React.FC<CelebrationGalleryProps> = ({ onBookCl
               From intimate birthday bashes and cocktail nights to grand wedding receptions and corporate family feasts at Tipsy Kitchen &amp; Bar.
             </p>
           </div>
-
-          <button
-            onClick={onBookClick}
-            className="px-5 py-2.5 rounded-xl bg-[#d4a24c] hover:bg-[#f3be65] text-[#1c1200] text-xs font-bold transition-all shadow-md active:scale-95 flex items-center gap-2 self-start sm:self-auto shrink-0"
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Host Your Celebration</span>
-          </button>
         </div>
 
         {/* Category Filter Pills */}
@@ -147,16 +139,6 @@ export const CelebrationGallery: React.FC<CelebrationGalleryProps> = ({ onBookCl
                     {activePhoto.caption}
                   </p>
                 </div>
-                <button
-                  onClick={() => {
-                    setActivePhoto(null);
-                    onBookClick();
-                  }}
-                  className="px-5 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-[#052e16] font-bold text-xs tracking-wide shrink-0 transition-all flex items-center justify-center gap-2"
-                >
-                  <span>Inquire for Party Here</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
               </div>
             </div>
           </div>
