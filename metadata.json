@@ -1,0 +1,6 @@
+{
+  "name": "Tipsy Kitchen & Bar - Digital Menu",
+  "description": "Luxury dark-themed digital menu card with table ordering and WhatsApp integration for Tipsy Kitchen & Bar, Khanna, Punjab.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
