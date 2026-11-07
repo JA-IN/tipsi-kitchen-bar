@@ -189,9 +189,9 @@ export const DISH_IMAGES: Record<string, string> = {
   "mn-13": "https://images.unsplash.com/photo-1534939561126-855b8675edd7?auto=format&fit=crop&w=300&q=80",
 
   // New Snacks
-  "ns-01": "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?auto=format&fit=crop&w=300&q=80",
+  // "ns-01": "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?auto=format&fit=crop&w=300&q=80",
   "ns-02": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=300&q=80",
-  "ns-03": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8zmRuLPVOwyLBjt2d3tHnDKoB16HMv2Qz_vadCTakeQ&s",
+  // "ns-03": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8zmRuLPVOwyLBjt2d3tHnDKoB16HMv2Qz_vadCTakeQ&s",
   "ns-04": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=300&q=80",
   "ns-05": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT0hLKup00V756gtL_LGIaiy4-Z52DemFvd7zKjPq3bA&s=10",
   "ns-06": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=300&q=80",
@@ -997,14 +997,14 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         badge: "Available Now",
         isSpecial: true
       },
-      {
-        id: "ns-01",
-        name: "Jack Potato",
-        description: "Stuffed potato loaded with seasoned paneer, bell pepper, herbs, fried crisp till golden.",
-        type: "veg",
-        image: DISH_IMAGES["ns-01"],
-        variants: [{ label: "Regular", price: 299 }]
-      },
+      // {
+      //   id: "ns-01",
+      //   name: "Jack Potato",
+      //   description: "Stuffed potato loaded with seasoned paneer, bell pepper, herbs, fried crisp till golden.",
+      //   type: "veg",
+      //   image: DISH_IMAGES["ns-01"],
+      //   variants: [{ label: "Regular", price: 299 }]
+      // },
       {
         id: "ns-02",
         name: "Dahi Ke Sholey",
@@ -1015,14 +1015,14 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         badge: "Popular",
         isSpecial: true
       },
-      {
-        id: "ns-03",
-        name: "Veg Octopus",
-        description: "Potato and cottage cheese artisanal noodle curls tossed with bird's eye chili and sweet-tangy sauce.",
-        type: "veg",
-        image: DISH_IMAGES["ns-03"],
-        variants: [{ label: "Regular", price: 299 }]
-      },
+      // {
+      //   id: "ns-03",
+      //   name: "Veg Octopus",
+      //   description: "Potato and cottage cheese artisanal noodle curls tossed with bird's eye chili and sweet-tangy sauce.",
+      //   type: "veg",
+      //   image: DISH_IMAGES["ns-03"],
+      //   variants: [{ label: "Regular", price: 299 }]
+      // },
       {
         id: "ns-04",
         name: "Black Paper Chicken",
